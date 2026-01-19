@@ -1,8 +1,12 @@
 package main
 
 func main() {
-	cards := newDeck()
-	// fmt.Println(cards.toString())
-	cards.saveToFile("my_cards")
+	// cards := newDeck()
+	// cards.saveToFile("my_cards")
+
+
+	//Reading from a file 
+	cards := newDeckFromFile("my_cards")
+	cards.print()
 
 }
