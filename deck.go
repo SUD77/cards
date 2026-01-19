@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // create a new type of deck
@@ -59,7 +60,7 @@ func newDeckFromFile(fileName string) deck {
 
 func (d deck) shuffle() {
 
-	source := rand.NewSource()
+	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
 
 	for i := range d {
